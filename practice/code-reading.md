@@ -16,6 +16,8 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+A: Because of local and global scope.
+
 ## Question 2
 
 Take a look at the following code:
@@ -34,6 +36,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+The first console log on line 34 calls the function f1 which console logs the global variable x displaying in the console 10.
+Second console log on line 35 will return undefined because it is outside of the scope of the function f1 and therefore cannot access variable y value.
 
 ## Question 3
 
@@ -62,3 +66,5 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+On line 55 the console log will return 9 because it is assigned as a const variable.
+Next the output on line 65 will be {x: 10} because Object properties are mutable even when using a const variable, however the reference to that Object stays immutable.
